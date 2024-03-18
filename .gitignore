@@ -1,7 +1,6 @@
 /.env
 /_app.py
-/data/
-/data_result/
+/data*/
 *.txt
 *.json
 _**/*

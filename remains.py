@@ -1,5 +1,5 @@
 import os
-import myfunc
+import _trash.myhelper as myhelper
 from dotenv import load_dotenv
 import pyupbit
 from datetime import datetime as dt
@@ -10,6 +10,8 @@ load_dotenv()
 
 access_key = os.getenv("UPBIT_OPEN_API_ACCESS_KEY")
 secret_key = os.getenv("UPBIT_OPEN_API_SECRET_KEY")
+upbit = pyupbit.Upbit(access_key, secret_key)
+my_balance = upbit.get_balances()
 
 def put_limit(upbit, my_balance):
     print('매수/매도쌍을 검수합니다. ')
